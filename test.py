@@ -1,10 +1,11 @@
 import numpy as np
+from data_loader import load_array
 
 # load data
-x_test = np.load('X_test.npy')
-x_train = np.load('X_train.npy')
-y_test = np.load('y_test.npy')
-y_train = np.load('y_train.npy')
+x_test = load_array('X_test.npy')
+x_train = load_array('X_train.npy')
+y_test = load_array('y_test.npy')
+y_train = load_array('y_train.npy')
 
 print("X_test shape",x_test.shape)
 print("y_test shape",y_test.shape)

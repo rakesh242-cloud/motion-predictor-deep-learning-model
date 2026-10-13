@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
 from model import MotionTransformer
 import os
+from data_loader import load_array
 
 
 label_map = {
@@ -52,11 +53,11 @@ print("Using device:", device)
 
 
 # Load Data
-X_test = np.load("X_test.npy")
-y_test = np.load("y_test.npy")
+X_test = load_array("X_test.npy")
+y_test = load_array("y_test.npy")
 
 # Normalize (same as training)
-X_train = np.load("X_train.npy")
+X_train = load_array("X_train.npy")
 mean = X_train.mean()
 std = X_train.std()
 

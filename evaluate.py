@@ -4,6 +4,7 @@ from model import MotionTransformer
 from sklearn.metrics import confusion_matrix, classification_report
 import matplotlib.pyplot as plt
 import seaborn as sns
+from data_loader import load_array
 
 
 # Device
@@ -25,13 +26,13 @@ label_map = {
 
 
 # Load Data (CORRECT FILES)
-X_test = np.load("X_test.npy")
-y_test = np.load("y_test.npy")
+X_test = load_array("X_test.npy")
+y_test = load_array("y_test.npy")
 
 
 # Normalize (IMPORTANT)
 # same stats as training
-X_train = np.load("X_train.npy")
+X_train = load_array("X_train.npy")
 mean = X_train.mean()
 std = X_train.std()
 

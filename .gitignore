@@ -1,5 +1,9 @@
 UCF-101/
+UCF-101.zip
+UCF-101.zip*.part
 *.npy
+saved_models/
 saved_models_93/
+.download-tools/
 __pycache__/
 *.pyc
