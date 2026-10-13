@@ -1,13 +1,7 @@
 import os
-from pathlib import Path
 
 
-root_path = Path(os.environ.get("UCF101_DATASET_PATH", Path(__file__).resolve().parent / "UCF-101"))
-
-if not root_path.is_dir():
-    raise FileNotFoundError(
-        f"UCF-101 dataset not found at {root_path}. Place it there or set UCF101_DATASET_PATH."
-    )
+root_path = r"C:\ml project course\motion-pattern prediction model\UCF-101"
 
 
 selected_folders = [

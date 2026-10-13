@@ -3,17 +3,10 @@ import mediapipe as mp
 import numpy as np
 import os
 import shutil
-from pathlib import Path
 
 
-# Uses the current project folder by default, regardless of the Windows user name.
-# Set UCF101_DATASET_PATH if the dataset is stored elsewhere.
-root_path = Path(os.environ.get("UCF101_DATASET_PATH", Path(__file__).resolve().parent / "UCF-101"))
-
-if not root_path.is_dir():
-    raise FileNotFoundError(
-        f"UCF-101 dataset not found at {root_path}. Place it there or set UCF101_DATASET_PATH."
-    )
+# ROOT DATASET PATH
+root_path = r"C:\Users\Ankit kairo\Downloads\UCF-101"
 
 
 # SELECTED FOLDERS ONLY

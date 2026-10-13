@@ -1,6 +1,4 @@
 import matplotlib.pyplot as plt
-import os
-from pathlib import Path
 
 def parse_log(file_path):
     epochs = []
@@ -60,12 +58,7 @@ def plot_data(epochs, losses, accuracies):
 
 
 if __name__ == "__main__":
-    file_path = Path(os.environ.get("TRAINING_LOG_PATH", Path(__file__).resolve().parent / "saved_models_93" / "modelaccuracy.log"))
-
-    if not file_path.is_file():
-        raise FileNotFoundError(
-            f"Training log not found at {file_path}. Place it there or set TRAINING_LOG_PATH."
-        )
+    file_path = "C:\ml project course\motion-pattern prediction model\saved_models_93\modelaccuracy.log"  # same folder me hona chahiye
 
     epochs, losses, accuracies = parse_log(file_path)
 

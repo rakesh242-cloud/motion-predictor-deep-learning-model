@@ -4,15 +4,9 @@ import numpy as np
 import random
 import mediapipe as mp
 from sklearn.model_selection import train_test_split
-from pathlib import Path
 
 
-DATASET_PATH = Path(os.environ.get("UCF101_DATASET_PATH", Path(__file__).resolve().parent / "UCF-101"))
-
-if not DATASET_PATH.is_dir():
-    raise FileNotFoundError(
-        f"UCF-101 dataset not found at {DATASET_PATH}. Place it there or set UCF101_DATASET_PATH."
-    )
+DATASET_PATH = r"C:\ml project course\motion-pattern prediction model\UCF-101"
 
 ACTIONS = {
     "JumpingJack": 0,

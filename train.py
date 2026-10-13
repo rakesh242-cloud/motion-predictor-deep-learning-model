@@ -4,7 +4,6 @@ import torch.nn as nn
 import numpy as np
 from torch.utils.data import Dataset, DataLoader
 from model import MotionTransformer
-from data_loader import load_array
 
 
 # Create folder for saved models
@@ -25,11 +24,11 @@ class MotionDataset(Dataset):
 
 
 # Load Data
-X_train = load_array("X_train.npy")
-y_train = load_array("y_train.npy")
+X_train = np.load("X_train.npy")
+y_train = np.load("y_train.npy")
 
-X_test = load_array("X_test.npy")
-y_test = load_array("y_test.npy")
+X_test = np.load("X_test.npy")
+y_test = np.load("y_test.npy")
 
 # Normalize
 mean = X_train.mean()

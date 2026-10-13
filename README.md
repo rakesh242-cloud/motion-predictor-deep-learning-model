@@ -55,36 +55,31 @@ pip install -r requirements.txt
 
 ---
 
-## 📦 Dataset and models
+## 📦 Dataset & Models Download
 
-Project repository: [Rakesh's motion predictor](https://github.com/rakesh242-cloud/motion-predictor-deep-learning-model)
+Download all required files from Google Drive:
 
-[Original project reference](https://github.com/kairo786/attention-based-Transformer-models-for-motion-pattern-analysis)
+[GitHub Link](https://github.com/kairo786/attention-based-Transformer-models-for-motion-pattern-analysis)
 
-[Shared Drive folder](https://drive.google.com/drive/folders/1n7W1V5KksnHhLEg8NcDRZ1csSFvgXQJr?usp=sharing)
+[Drive Link](https://drive.google.com/drive/folders/1n7W1V5KksnHhLEg8NcDRZ1csSFvgXQJr?usp=sharing)
 
-**Training, testing, evaluation, and visualization use the four processed `.npy` files directly from Google Drive by default.** Run the scripts normally after installing `requirements.txt`; `data_loader.py` transfers each array into memory and does not save it as a local dataset file. This transfers about 450 MB per run, so an internet connection and enough RAM are required. The 7.41 GB `UCF-101.zip` archive is not needed for these scripts. The pretrained `best_model.pth` is already included in this repository.
+Contents:
 
-```powershell
-python train.py
-python evaluate.py
+* Original Dataset (UCF-101)
+* Processed `.npy` files
+* Trained models (`.pth`)
+
+After downloading, place them like:
+
 ```
-
-If you already have the four `.npy` files locally and want to use them instead, put them beside `train.py` and set `MOTION_DATA_SOURCE=local` in PowerShell:
-
-```powershell
-$env:MOTION_DATA_SOURCE = "local"
-python train.py
+project_root/
+├── UCF-101/
+├── X_train.npy
+├── y_train.npy
+├── X_test.npy
+├── y_test.npy
+├── best_model.pth
 ```
-
-The raw-video preprocessing scripts (`filter.py`, `handledataset.py`, and `videocount.py`) still need the extracted `UCF-101` videos. They look in the project folder by default. To use videos stored elsewhere, set `UCF101_DATASET_PATH`:
-
-```powershell
-$env:UCF101_DATASET_PATH = "C:\path\to\UCF-101"
-python filter.py
-```
-
-`plot_accuracy.py` looks for `saved_models_93/modelaccuracy.log` in the project folder. Set `TRAINING_LOG_PATH` if your log is elsewhere.
 
 ---
 
@@ -187,7 +182,7 @@ Shows:
 
 ## 👨‍💻 Author
 
-**Rakesh** ([rakesh242-cloud](https://github.com/rakesh242-cloud))
+**Rakesh**
 EP, IIT Patna
 
 ---
