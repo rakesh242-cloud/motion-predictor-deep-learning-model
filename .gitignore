@@ -1,0 +1,5 @@
+UCF-101/
+*.npy
+saved_models_93/
+__pycache__/
+*.pyc

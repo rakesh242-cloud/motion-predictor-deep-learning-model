@@ -57,9 +57,11 @@ pip install -r requirements.txt
 
 ## 📦 Dataset & Models Download
 
-Download all required files from Google Drive:
+Project repository: [Rakesh's motion predictor](https://github.com/rakesh242-cloud/motion-predictor-deep-learning-model)
 
-[GitHub Link](https://github.com/kairo786/attention-based-Transformer-models-for-motion-pattern-analysis)
+Download the dataset and other required files from Google Drive:
+
+[Original project reference](https://github.com/kairo786/attention-based-Transformer-models-for-motion-pattern-analysis)
 
 [Drive Link](https://drive.google.com/drive/folders/1n7W1V5KksnHhLEg8NcDRZ1csSFvgXQJr?usp=sharing)
 
@@ -80,6 +82,15 @@ project_root/
 ├── y_test.npy
 ├── best_model.pth
 ```
+
+`filter.py`, `handledataset.py`, and `videocount.py` look for `UCF-101` in the project folder by default. The dataset is not included in this repository. If you keep it elsewhere, set `UCF101_DATASET_PATH` to its full path before running those scripts. For example, in PowerShell:
+
+```powershell
+$env:UCF101_DATASET_PATH = "C:\path\to\UCF-101"
+python filter.py
+```
+
+`plot_accuracy.py` looks for `saved_models_93/modelaccuracy.log` in the project folder. Set `TRAINING_LOG_PATH` if your log is elsewhere.
 
 ---
 
@@ -182,7 +193,7 @@ Shows:
 
 ## 👨‍💻 Author
 
-**Rakesh**
+**Rakesh** ([rakesh242-cloud](https://github.com/rakesh242-cloud))
 EP, IIT Patna
 
 ---
