@@ -1,0 +1,7 @@
+torch
+numpy
+matplotlib
+seaborn
+scikit-learn
+opencv-python==4.8.0
+mediapipe==0.10.10
